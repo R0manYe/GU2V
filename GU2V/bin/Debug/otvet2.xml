@@ -1,0 +1,50 @@
+<getGU2GReply>
+  <Gu2G_ID>1308229157</Gu2G_ID>
+  <Gu2G_Num>1491</Gu2G_Num>
+  <StateID>1429</StateID>
+  <StateName>Заготовка</StateName>
+  <Gu2GDate>02.09.2022</Gu2GDate>
+  <Gu2GDateCreate>02.09.2022</Gu2GDateCreate>
+  <Gu2GClientID>42657</Gu2GClientID>
+  <Gu2GClientOKPO>05141354</Gu2GClientOKPO>
+  <Gu2GClientName>Акционерное общество  "Восточно-Сибирского промышленного  железнодорожного транспорта"</Gu2GClientName>
+  <StationCode>88400</StationCode>
+  <StationName>НАЗАРОВО</StationName>
+  <RWID>36</RWID>
+  <RWName>КРАСНОЯРСКАЯ</RWName>
+  <Gu2GPlace>ВОСТОКСИБПРОМТР.НАЗ</Gu2GPlace>
+  <Gu2GLoadWay>ВОСТОКСИБПРОМТР.НАЗ</Gu2GLoadWay>
+  <isRepeat>0</isRepeat>
+  <wags>
+    <wag>
+      <CarOrder>1</CarOrder>
+      <CarID>4360241</CarID>
+      <CarNumber>52388741</CarNumber>
+      <carOperation>вгр</carOperation>
+      <PlanDatePodUbor>02.09.2022</PlanDatePodUbor>
+      <carFreightName>КОМБИКОРМА ВС</carFreightName>
+      <carRecipName>ООО "Назаровское рыбное хозяйство"</carRecipName>
+      <CarIsReady>0</CarIsReady>
+    </wag>
+    <wag>
+      <CarOrder>2</CarOrder>
+      <CarID>4360242</CarID>
+      <CarNumber>53828711</CarNumber>
+      <carOperation>вгр</carOperation>
+      <PlanDatePodUbor>02.09.2022</PlanDatePodUbor>
+      <carFreightName>АММОНИЯ СУЛЬФАТ</carFreightName>
+      <carRecipName>ОАО "Назаровоагропромхимия"</carRecipName>
+      <CarIsReady>0</CarIsReady>
+    </wag>
+    <wag>
+      <CarOrder>3</CarOrder>
+      <CarID>4360243</CarID>
+      <CarNumber>55487565</CarNumber>
+      <carOperation>вгр</carOperation>
+      <PlanDatePodUbor>02.09.2022</PlanDatePodUbor>
+      <carFreightName>АММОНИЯ СУЛЬФАТ</carFreightName>
+      <carRecipName>АО "В-Сибпромтранс"</carRecipName>
+      <CarIsReady>0</CarIsReady>
+    </wag>
+  </wags>
+</getGU2GReply>

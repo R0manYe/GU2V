@@ -1,0 +1,9 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+    <NS1:GetBlockResponse xmlns:NS1="SysEtranInt">
+      <return xsi:type="xsd:boolean">true</return>
+      <Text xsi:type="xsd:string">&lt;?xml version="1.0" encoding="windows-1251"?&gt;
+&lt;GU2VStatusReply&gt;&lt;GU2V&gt;&lt;DocId&gt;1261663831&lt;/DocId&gt;&lt;DocNum&gt;481&lt;/DocNum&gt;&lt;DocDate&gt;19.04.2022&lt;/DocDate&gt;&lt;DocStateId&gt;549&lt;/DocStateId&gt;&lt;DocState&gt;Согласован ОАО «РЖД»&lt;/DocState&gt;&lt;DocLastOper&gt;19.04.2022 10:24:40&lt;/DocLastOper&gt;&lt;/GU2V&gt;&lt;GU2V&gt;&lt;DocId&gt;1261661307&lt;/DocId&gt;&lt;DocNum&gt;480&lt;/DocNum&gt;&lt;DocDate&gt;19.04.2022&lt;/DocDate&gt;&lt;DocStateId&gt;549&lt;/DocStateId&gt;&lt;DocState&gt;Согласован ОАО «РЖД»&lt;/DocState&gt;&lt;DocLastOper&gt;19.04.2022 10:16:31&lt;/DocLastOper&gt;&lt;/GU2V&gt;&lt;OperDate&gt;19.04.2022 13:52:34&lt;/OperDate&gt;&lt;OperId&gt;9337295092&lt;/OperId&gt;&lt;/GU2VStatusReply&gt;</Text>
+    </NS1:GetBlockResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,36 @@
+<GU2VStatusReply>
+  <GU2V>
+    <DocId>1266775961</DocId>
+    <DocNum>567</DocNum>
+    <DocDate>05.05.2022</DocDate>
+    <DocStateId>549</DocStateId>
+    <DocState>Согласован ОАО «РЖД»</DocState>
+    <DocLastOper>05.05.2022 07:45:15</DocLastOper>
+  </GU2V>
+  <GU2V>
+    <DocId>1266775100</DocId>
+    <DocNum>566</DocNum>
+    <DocDate>05.05.2022</DocDate>
+    <DocStateId>549</DocStateId>
+    <DocState>Согласован ОАО «РЖД»</DocState>
+    <DocLastOper>05.05.2022 07:41:54</DocLastOper>
+  </GU2V>
+  <GU2V>
+    <DocId>1266847892</DocId>
+    <DocNum>568</DocNum>
+    <DocDate>05.05.2022</DocDate>
+    <DocStateId>549</DocStateId>
+    <DocState>Согласован ОАО «РЖД»</DocState>
+    <DocLastOper>05.05.2022 11:32:13</DocLastOper>
+  </GU2V>
+  <GU2V>
+    <DocId>1266715770</DocId>
+    <DocNum>565</DocNum>
+    <DocDate>05.05.2022</DocDate>
+    <DocStateId>549</DocStateId>
+    <DocState>Согласован ОАО «РЖД»</DocState>
+    <DocLastOper>05.05.2022 03:11:48</DocLastOper>
+  </GU2V>
+  <OperDate>05.05.2022 12:11:50</OperDate>
+  <OperId>9373948205</OperId>
+</GU2VStatusReply>

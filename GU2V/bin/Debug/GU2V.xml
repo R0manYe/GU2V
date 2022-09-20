@@ -1,0 +1,20 @@
+<GU2VStatusReply>
+  <GU2V>
+    <DocId>1262673036</DocId>
+    <DocNum>499</DocNum>
+    <DocDate>22.04.2022</DocDate>
+    <DocStateId>549</DocStateId>
+    <DocState>Согласован ОАО «РЖД»</DocState>
+    <DocLastOper>22.04.2022 08:10:57</DocLastOper>
+  </GU2V>
+  <GU2V>
+    <DocId>1262747430</DocId>
+    <DocNum>501</DocNum>
+    <DocDate>22.04.2022</DocDate>
+    <DocStateId>549</DocStateId>
+    <DocState>Согласован ОАО «РЖД»</DocState>
+    <DocLastOper>22.04.2022 11:55:00</DocLastOper>
+  </GU2V>
+  <OperDate>22.04.2022 13:09:04</OperDate>
+  <OperId>9344534592</OperId>
+</GU2VStatusReply>

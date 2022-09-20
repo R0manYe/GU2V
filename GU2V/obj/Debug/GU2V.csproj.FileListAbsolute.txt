@@ -1,0 +1,13 @@
+C:\Razrab\GU2V\GU2V\bin\Debug\GU2V.exe.config
+C:\Razrab\GU2V\GU2V\bin\Debug\GU2V.exe
+C:\Razrab\GU2V\GU2V\bin\Debug\GU2V.pdb
+C:\Razrab\GU2V\GU2V\obj\Debug\GU2V.csproj.CoreCompileInputs.cache
+C:\Razrab\GU2V\GU2V\obj\Debug\GU2V.exe
+C:\Razrab\GU2V\GU2V\obj\Debug\GU2V.pdb
+C:\Razrab\GU2V\GU2V\bin\Debug\Oracle.DataAccess.dll
+C:\Razrab\GU2V\GU2V\obj\Debug\GU2V.csproj.CopyComplete
+C:\Razrab\GU2V\GU2V\bin\Debug\GU2V.exe.manifest
+C:\Razrab\GU2V\GU2V\bin\Debug\GU2V.application
+C:\Razrab\GU2V\GU2V\obj\Debug\GU2V.exe.manifest
+C:\Razrab\GU2V\GU2V\obj\Debug\GU2V.application
+C:\Razrab\GU2V\GU2V\obj\Debug\GU2V.csprojAssemblyReference.cache

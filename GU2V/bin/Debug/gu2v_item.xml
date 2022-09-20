@@ -1,0 +1,777 @@
+<getGU2VReply>
+  <Request>
+    <data>
+      <railway_station_name>КРАСНОЯРСК-СЕВ</railway_station_name>
+      <railway_station_code>890108</railway_station_code>
+      <railway_name>Красноярская</railway_name>
+      <number>1041</number>
+      <notification_date>02.09.2022</notification_date>
+      <notification_time>10:10</notification_time>
+      <orgid>42657</orgid>
+      <contragent>АО "В-Сибпромтранс"</contragent>
+      <get_place>ВОСТОКСИБПРОМТР.СЕВ</get_place>
+      <way_name>ВОСТОКСИБПРОМТР.СЕВ</way_name>
+      <wagons>
+        <wagon>
+          <order_number>1</order_number>
+          <wagon_number>68151224</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>2</order_number>
+          <wagon_number>62633615</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>3</order_number>
+          <wagon_number>68057538</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>4</order_number>
+          <wagon_number>63562441</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>5</order_number>
+          <wagon_number>62552815</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>6</order_number>
+          <wagon_number>68068238</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>7</order_number>
+          <wagon_number>68203140</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>8</order_number>
+          <wagon_number>68203835</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>9</order_number>
+          <wagon_number>68155829</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>10</order_number>
+          <wagon_number>63110878</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>11</order_number>
+          <wagon_number>64824873</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>12</order_number>
+          <wagon_number>68084656</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>13</order_number>
+          <wagon_number>68033877</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>14</order_number>
+          <wagon_number>68071315</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>15</order_number>
+          <wagon_number>58589037</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>16</order_number>
+          <wagon_number>68230317</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>17</order_number>
+          <wagon_number>68214741</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>18</order_number>
+          <wagon_number>63110902</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>19</order_number>
+          <wagon_number>54365291</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>20</order_number>
+          <wagon_number>62507264</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>21</order_number>
+          <wagon_number>62897871</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>22</order_number>
+          <wagon_number>53259743</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>23</order_number>
+          <wagon_number>62646153</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>24</order_number>
+          <wagon_number>55650378</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>25</order_number>
+          <wagon_number>54148226</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>26</order_number>
+          <wagon_number>63408652</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>27</order_number>
+          <wagon_number>68105253</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>28</order_number>
+          <wagon_number>62323100</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>29</order_number>
+          <wagon_number>55011571</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>30</order_number>
+          <wagon_number>58695982</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>31</order_number>
+          <wagon_number>64348212</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>32</order_number>
+          <wagon_number>58598871</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>33</order_number>
+          <wagon_number>56388630</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>34</order_number>
+          <wagon_number>54025937</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>35</order_number>
+          <wagon_number>53657524</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>36</order_number>
+          <wagon_number>62551288</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>37</order_number>
+          <wagon_number>63596258</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>38</order_number>
+          <wagon_number>53300521</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>39</order_number>
+          <wagon_number>57563256</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>40</order_number>
+          <wagon_number>56523376</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>41</order_number>
+          <wagon_number>54174511</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>42</order_number>
+          <wagon_number>52738804</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>43</order_number>
+          <wagon_number>68202274</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>44</order_number>
+          <wagon_number>62292800</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>45</order_number>
+          <wagon_number>63300552</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>46</order_number>
+          <wagon_number>56539398</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>47</order_number>
+          <wagon_number>53489134</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>48</order_number>
+          <wagon_number>63207146</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>49</order_number>
+          <wagon_number>63675961</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>50</order_number>
+          <wagon_number>63672208</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>51</order_number>
+          <wagon_number>68113851</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>52</order_number>
+          <wagon_number>68090661</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>53</order_number>
+          <wagon_number>68036763</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>54</order_number>
+          <wagon_number>68129964</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>55</order_number>
+          <wagon_number>68054519</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>56</order_number>
+          <wagon_number>62107263</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>57</order_number>
+          <wagon_number>68109404</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>58</order_number>
+          <wagon_number>62553219</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>59</order_number>
+          <wagon_number>53793980</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>60</order_number>
+          <wagon_number>63673974</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>61</order_number>
+          <wagon_number>58598632</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>62</order_number>
+          <wagon_number>68206002</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+        <wagon>
+          <order_number>63</order_number>
+          <wagon_number>68298207</wagon_number>
+          <containers />
+          <planned_filing_date>02.09.2022</planned_filing_date>
+          <planned_filing_time>12:10</planned_filing_time>
+          <operation>вгр</operation>
+          <cargo_name>УГ БУР НЕПОДМОС</cargo_name>
+          <cargo_code>161096</cargo_code>
+          <recipient>АО " Енисейская ТГК(ТГК-13)" филиал "К</recipient>
+          <annotation />
+        </wagon>
+      </wagons>
+      <wagons_total>63</wagons_total>
+      <position_FIO>Приемосдатчик ОАО РЖД Козлова М.В.</position_FIO>
+    </data>
+  </Request>
+  <DocState>Согласован ОАО «РЖД»</DocState>
+</getGU2VReply>
