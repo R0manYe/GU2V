@@ -10,7 +10,7 @@ namespace GU2V
 {
     class EmOpov
     {
-        public void Opov_err(string address,string TextPisma)
+        public void Opov_err(string address,string TextPisma,string Zagolovok)
         {
               
                 DateTime parsedDate = DateTime.Now;
@@ -20,9 +20,9 @@ namespace GU2V
                 MailMessage MyMessage = new MailMessage();
                 MyMessage.From = new MailAddress("robot@abakan.vspt.ru");      // От кого отправляем почту
                 MyMessage.To.Add(address);                       // Кому отправляем почту
-                MyMessage.Subject = "Не правильный ответ от АСУ при импорте ГУ2В ";          // Тема письма
+                MyMessage.Subject = Zagolovok;          // Тема письма
                 MyMessage.Body = " Здравтсвуйте! \n " +
-                TextPisma+" c " + parsedDate + "!!!";
+                TextPisma;
                 Smtp.Send(MyMessage);
         
         }

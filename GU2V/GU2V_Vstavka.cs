@@ -6,16 +6,19 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace GU2V
 {
     class GU2V_Vstavka
     {
-    
-       public int i_cikl { get; set; }
+
+        public int i_cikl { get; set; }
+        public string St { get; set; }
         private int VstavkaDoc()
         {
-           
+
             string sborn = "SELECT  XMLAGG(XMLELEMENT(\"GU2VStatus\", XMLFOREST(to_char(sysdate-1,'DD.mm.yyyy HH24:MI:SS')\"fromDate\")" +
                        " \"secondGoup\",XMLFOREST((to_char(sysdate,'DD.mm.yyyy HH24:MI:SS'))\"toDate\")\"secondGoup\")) AS \"XML_QUERY\" FROM DUAL";
             GoEtran otv = new GoEtran();
@@ -34,7 +37,7 @@ namespace GU2V
                 SqlDataReader prov = com.ExecuteReader();
                 prov.Read();
                 int i_prov = Convert.ToInt16(prov.GetValue(0).ToString());
-                Console.WriteLine("Перед проверкой i_pov=",i_prov);
+                Console.WriteLine("Перед проверкой i_pov=", i_prov);
                 if (i_prov > 0)
                 {
                     Console.WriteLine("Происходит загонка");
@@ -60,24 +63,25 @@ namespace GU2V
                         conn.Close();
 
                     }
-                    Console.WriteLine("i_pov="+ i_prov);
+                    Console.WriteLine("i_pov=" + i_prov);
                     return i_prov;
                 }
                 else
                 {
                     Console.WriteLine("Исключение");
-                    return i_prov;                 
+                    return i_prov;
                 }
             }
 
-       
-       
+
+
         }
-        public int  VstavkaDoc_Item()
-        {                   
-            int per= VstavkaDoc();
-            Console.WriteLine("Вход в Vstavka "+per);
-            if (per > 0)            {
+        public int VstavkaDoc_Item()
+        {
+            int per = VstavkaDoc();
+            Console.WriteLine("Вход в Vstavka " + per);
+            if (per > 0)
+            {
                 string ochistka = "delete from spr_collection where id_spr='GU2V_TEMP'";
                 string zagonka = "insert into  spr_collection(ID_SPR,NAIM) select 'GU2V_TEMP' as naim, docid from(select docid from ETRAN_GU2V_DOC  where not exists (select id_doc_etran from " +
                     " ETRAN_GU2V_ITEM  where ETRAN_GU2V_DOC.DOCID=ETRAN_GU2V_ITEM.ID_DOC_ETRAN))";
@@ -92,41 +96,58 @@ namespace GU2V
                     OracleCommand command4 = new OracleCommand(ins_log_doc_item, conn);
                     conn.Open();
                     OracleDataReader otch = command1.ExecuteReader();
-                    conn.Close();                    
+                    conn.Close();
                     conn.Open();
                     OracleDataReader zag = command2.ExecuteReader();
                     conn.Close();
                     conn.Open();
                     OracleDataReader cikl = command.ExecuteReader();
                     cikl.Read();
-                     i_cikl = Convert.ToInt32(cikl.GetValue(0).ToString());
+                    i_cikl = Convert.ToInt32(cikl.GetValue(0).ToString());
                     Console.WriteLine(i_cikl);
                     if (i_cikl > 0)
                     {
-                        Console.WriteLine("Данные есть!"+i_cikl);
-                    //    Console.ReadKey();
+                        Console.WriteLine("Данные есть!" + i_cikl);
+                        //    Console.ReadKey();
 
-                       
-                        for (int i = 1; (i_cikl)>=i; ++i)
+
+                        for (int i = 1; (i_cikl) >= i; ++i)
                         {
-                          string perebor = "select doc from (select rownum as ro,naim as doc from spr_collection where id_spr='GU2V_TEMP') where ro='" + i + "'";
+                            string perebor = "select doc from (select rownum as ro,naim as doc from spr_collection where id_spr='GU2V_TEMP') where ro='" + i + "'";
                             conn.Close();
-                            OracleCommand command3 = new OracleCommand(perebor, conn);                            
+                            OracleCommand command3 = new OracleCommand(perebor, conn);
                             conn.Open();
                             OracleDataReader pereb = command3.ExecuteReader();
                             while (pereb.Read())
                             {
                                 string pr = pereb.GetValue(0).ToString();
-                                Console.WriteLine("Номер " + i + " Код документа " + pr+" "+i_cikl);
-                              //  Console.ReadKey();
+                                Console.WriteLine("Номер " + i + " Код документа " + pr + " " + i_cikl);
+                                //  Console.ReadKey();
                                 string sborn1 = "SELECT  XMLAGG(XMLELEMENT(\"getGU2V\",XMLFOREST(('" + pr + "')\"Doc_ID\")\"secondGoup\")) AS \"XML_QUERY\" FROM DUAL";
                                 GoEtran pars1 = new GoEtran();
                                 string pr1 = pars1.Parsing(sborn1);
-                                File.WriteAllText("gu2v_item.xml", pr1);
+                                File.WriteAllText(@"C:\xml\gu2v_item.xml", pr1);
+
+                                XmlDocument xml = new XmlDocument();
+                                xml.Load(@"C:\xml\gu2v_item.xml");
+                                foreach (XmlNode node1 in xml.SelectNodes("/getGU2VReply/DocState/StateName"))
+                                {
+                                    foreach (XmlNode node2 in node1.ChildNodes)
+                                    {
+                                        string St = node2.Value.ToString();
+                                    }
+                                }
+
+                                Console.WriteLine("Вызов Декоде");
+                                Decode64 f = new Decode64();
+                                string pr2 = f.Decoder();
+                               /* const string inputXMLFile = @"c:\xml\gu2_64.xml";
+                                string pr2=inputXMLFile;*/
+                             //   Console.WriteLine(pr2);
 
                                 using (SqlConnection connection1 = new SqlConnection("Data Source=192.168.1.13;Initial Catalog=dislokacia;User ID=Roman;Password=238533"))
                                 {
-                                    string proverka = "DECLARE @x xml SET @x = '" + pr1 + "' INSERT INTO [FLAGMAN]..[VSPTSVOD].[ETRAN_GU2V_ITEM]([RAILWAY_STATION_NAME],[RAILWAY_STATION_CODE],[RAILWAY_NAME],[NUM],[NOTIFICATION_DATE],[NOTIFICATION_TIME],[ORGID],[CONTRAGENT] " +
+                                    string proverka = "DECLARE @x xml SET @x = '" + pr2 + "' INSERT INTO [FLAGMAN]..[VSPTSVOD].[ETRAN_GU2V_ITEM]([RAILWAY_STATION_NAME],[RAILWAY_STATION_CODE],[RAILWAY_NAME],[NUM],[NOTIFICATION_DATE],[NOTIFICATION_TIME],[ORGID],[CONTRAGENT] " +
                          ",[GET_PLACE],[WAY_NAME],[ORDER_NUMBER],[WAGON_NUMBER],[PLANNED_FILING_DATE],[PLANNED_FILING_TIME],[OPERATION],[CARGO_NAME],[CARGO_CODE],[RECIPIENT],[WAGONS_TOTAL],[POSITION_FIO],[DOCSTATE],[ID_DOC_ETRAN],[DATE_INS]) " +
                         " select P.c.value('(railway_station_name)[1]', 'varchar(50)') AS railway_station_name,P.c.value('(railway_station_code)[1]', 'int') AS railway_station_code," +
                         " P.c.value('(railway_name)[1]', 'varchar(50)') AS railway_name,P.c.value('(number)[1]', 'varchar(50)') AS number,P.c.value('(notification_date)[1]', 'datetime') AS notification_date," +
@@ -135,37 +156,39 @@ namespace GU2V
                         " T.c.value('(wagon_number)[1]', 'int') AS wagon_number,T.c.value('(planned_filing_date)[1]', 'datetime') AS planned_filing_date," +
                         " T.c.value('(planned_filing_time)[1]', 'varchar(50)') AS planned_filing_time,T.c.value('(operation)[1]', 'varchar(50)') AS operation, " +
                         " T.c.value('(cargo_name)[1]', 'varchar(50)') AS cargo_name,T.c.value('(cargo_code)[1]', 'int') AS cargo_code,T.c.value('(recipient)[1]', 'varchar(300)') AS RECIPIENT," +
-                        " P.c.value('(wagons_total)[1]', 'varchar(50)') AS wagons_total,P.c.value('(position_FIO)[1]', 'varchar(200)') AS position_FIO,M.c.value('(DocState)[1]', 'varchar(200)') AS DocState," +
-                        "'" + pr + "' as dd,getdate() as dat  FROM @x.nodes('/getGU2VReply/Request/data/wagons/wagon') T(c) cross apply  @x.nodes('/getGU2VReply/Request/data') P(c) " +
-                        "cross apply  @x.nodes('/getGU2VReply') M(c)";
+                        " P.c.value('(wagons_total)[1]', 'varchar(50)') AS wagons_total,P.c.value('(position_FIO)[1]', 'varchar(200)') AS position_FIO,'"+St+"' AS DocState," +
+                        "'" + pr + "' as dd,getdate() as dat  FROM @x.nodes('/data/wagons/wagon') T(c) cross apply  @x.nodes('/data') P(c)";
                                     SqlCommand com = new SqlCommand(proverka, connection1);
                                     connection1.Open();
                                     SqlDataReader prov = com.ExecuteReader();
                                     connection1.Close();
-                                       Console.WriteLine("Загонка прошла "+pr+"  "+i+" из "+i_cikl);
+                                    Console.WriteLine("Загонка прошла " + pr + "  " + i + " из " + i_cikl);
 
-                                  //  return; 
+                                    //  return; 
                                 }
                             }
-                            conn.Close();
-                         
+                                conn.Close();
+                               
+
+                            }
+                            return per;
+                        }
+                        conn.Close();
+                        conn.Open();
+                        OracleDataReader logs_item = command4.ExecuteReader();
+                        conn.Close();
+
+                        {
+                            //   Console.WriteLine("Конец!");
 
                         }
                     
-                    }
-                    conn.Close();
-                    conn.Open();
-                    OracleDataReader logs_item = command4.ExecuteReader();
-                    conn.Close();
-                    
-                    {
-                     //   Console.WriteLine("Конец!");
-                     
+                        
                     }
                 }
-            }
-            return per;
+                return per;
 
+            }
         }
     }
-}
+

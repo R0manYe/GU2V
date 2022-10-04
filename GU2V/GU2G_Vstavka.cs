@@ -31,7 +31,7 @@ namespace GU2V
             }
 
 
-                string sborn = "SELECT  XMLAGG(XMLELEMENT(\"GU2GStatus\", XMLFOREST(to_char(sysdate-1,'DD.mm.yyyy HH24:MI:SS')\"fromDate\")" +
+                string sborn = "SELECT  XMLAGG(XMLELEMENT(\"GU2GStatus\", XMLFOREST(to_char(sysdate-4,'DD.mm.yyyy HH24:MI:SS')\"fromDate\")" +
                            " \"secondGoup\",XMLFOREST((to_char(sysdate,'DD.mm.yyyy HH24:MI:SS'))\"toDate\")\"secondGoup\")) AS \"XML_QUERY\" FROM DUAL";
                     GoEtran otv = new GoEtran();
                     string pr = otv.Parsing(sborn);

@@ -1,50 +1,244 @@
-<getGU2GReply>
-  <Gu2G_ID>1308229157</Gu2G_ID>
-  <Gu2G_Num>1491</Gu2G_Num>
-  <StateID>1429</StateID>
-  <StateName>Заготовка</StateName>
-  <Gu2GDate>02.09.2022</Gu2GDate>
-  <Gu2GDateCreate>02.09.2022</Gu2GDateCreate>
-  <Gu2GClientID>42657</Gu2GClientID>
-  <Gu2GClientOKPO>05141354</Gu2GClientOKPO>
-  <Gu2GClientName>Акционерное общество  "Восточно-Сибирского промышленного  железнодорожного транспорта"</Gu2GClientName>
-  <StationCode>88400</StationCode>
-  <StationName>НАЗАРОВО</StationName>
-  <RWID>36</RWID>
-  <RWName>КРАСНОЯРСКАЯ</RWName>
-  <Gu2GPlace>ВОСТОКСИБПРОМТР.НАЗ</Gu2GPlace>
-  <Gu2GLoadWay>ВОСТОКСИБПРОМТР.НАЗ</Gu2GLoadWay>
-  <isRepeat>0</isRepeat>
-  <wags>
-    <wag>
-      <CarOrder>1</CarOrder>
-      <CarID>4360241</CarID>
-      <CarNumber>52388741</CarNumber>
-      <carOperation>вгр</carOperation>
-      <PlanDatePodUbor>02.09.2022</PlanDatePodUbor>
-      <carFreightName>КОМБИКОРМА ВС</carFreightName>
-      <carRecipName>ООО "Назаровское рыбное хозяйство"</carRecipName>
-      <CarIsReady>0</CarIsReady>
-    </wag>
-    <wag>
-      <CarOrder>2</CarOrder>
-      <CarID>4360242</CarID>
-      <CarNumber>53828711</CarNumber>
-      <carOperation>вгр</carOperation>
-      <PlanDatePodUbor>02.09.2022</PlanDatePodUbor>
-      <carFreightName>АММОНИЯ СУЛЬФАТ</carFreightName>
-      <carRecipName>ОАО "Назаровоагропромхимия"</carRecipName>
-      <CarIsReady>0</CarIsReady>
-    </wag>
-    <wag>
-      <CarOrder>3</CarOrder>
-      <CarID>4360243</CarID>
-      <CarNumber>55487565</CarNumber>
-      <carOperation>вгр</carOperation>
-      <PlanDatePodUbor>02.09.2022</PlanDatePodUbor>
-      <carFreightName>АММОНИЯ СУЛЬФАТ</carFreightName>
-      <carRecipName>АО "В-Сибпромтранс"</carRecipName>
-      <CarIsReady>0</CarIsReady>
-    </wag>
-  </wags>
-</getGU2GReply>
+<GU2GStatusReply>
+  <GU2G>
+    <DocId>1316626027</DocId>
+    <DocNum>2161</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>30.09.2022 11:10:18</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316659280</DocId>
+    <DocNum>2163</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>30.09.2022 12:50:32</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316761701</DocId>
+    <DocNum>2169</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>30.09.2022 18:22:10</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316885340</DocId>
+    <DocNum>2180</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>01.10.2022 06:54:53</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316886680</DocId>
+    <DocNum>2182</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>01.10.2022 07:02:43</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316893242</DocId>
+    <DocNum>2183</DocNum>
+    <DocStateId>1430</DocStateId>
+    <DocState>Подписан Клиентом</DocState>
+    <DocDate>01.10.2022</DocDate>
+    <isRepeat>0</isRepeat>
+    <Gu2GNeedForECP>1</Gu2GNeedForECP>
+    <DocLastOper>01.10.2022 08:27:10</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316895645</DocId>
+    <DocNum>2185</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>01.10.2022 07:56:10</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316908230</DocId>
+    <DocNum>2186</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>01.10.2022 09:00:33</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316923741</DocId>
+    <DocNum>2187</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>01.10.2022 10:07:40</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316928152</DocId>
+    <DocNum>2189</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>01.10.2022 10:26:31</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316785856</DocId>
+    <DocNum>2171</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>30.09.2022 20:24:54</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316786320</DocId>
+    <DocNum>2172</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>30.09.2022 20:28:16</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316814151</DocId>
+    <DocNum>2173</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>30.09.2022 23:32:27</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316839155</DocId>
+    <DocNum>2175</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>01.10.2022 02:29:42</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316878534</DocId>
+    <DocNum>2178</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>01.10.2022 06:15:48</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316885379</DocId>
+    <DocNum>2181</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>01.10.2022 06:55:03</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316658379</DocId>
+    <DocNum>2162</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>30.09.2022 12:47:36</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316881201</DocId>
+    <DocNum>2179</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>01.10.2022 06:31:08</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316893369</DocId>
+    <DocNum>2184</DocNum>
+    <DocStateId>1430</DocStateId>
+    <DocState>Подписан Клиентом</DocState>
+    <DocDate>01.10.2022</DocDate>
+    <isRepeat>0</isRepeat>
+    <Gu2GNeedForECP>1</Gu2GNeedForECP>
+    <DocLastOper>01.10.2022 08:28:14</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316873623</DocId>
+    <DocNum>2177</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>01.10.2022 05:49:35</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316927942</DocId>
+    <DocNum>2188</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>01.10.2022 10:25:37</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316688841</DocId>
+    <DocNum>2166</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>30.09.2022 14:21:46</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316783710</DocId>
+    <DocNum>2170</DocNum>
+    <DocStateId>1430</DocStateId>
+    <DocState>Подписан Клиентом</DocState>
+    <DocDate>30.09.2022</DocDate>
+    <isRepeat>0</isRepeat>
+    <Gu2GNeedForECP>1</Gu2GNeedForECP>
+    <DocLastOper>30.09.2022 20:43:19</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316859296</DocId>
+    <DocNum>2176</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>01.10.2022 04:46:14</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316683569</DocId>
+    <DocNum>2164</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>30.09.2022 14:05:53</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316685087</DocId>
+    <DocNum>2165</DocNum>
+    <DocStateId>1430</DocStateId>
+    <DocState>Подписан Клиентом</DocState>
+    <DocDate>30.09.2022</DocDate>
+    <isRepeat>0</isRepeat>
+    <Gu2GNeedForECP>1</Gu2GNeedForECP>
+    <DocLastOper>30.09.2022 14:48:27</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316689617</DocId>
+    <DocNum>2167</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>30.09.2022 14:23:42</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316721220</DocId>
+    <DocNum>2168</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>30.09.2022 16:00:29</DocLastOper>
+  </GU2G>
+  <GU2G>
+    <DocId>1316838724</DocId>
+    <DocNum>2174</DocNum>
+    <DocStateId>1429</DocStateId>
+    <DocState>Заготовка</DocState>
+    <isRepeat>0</isRepeat>
+    <DocLastOper>01.10.2022 02:26:27</DocLastOper>
+  </GU2G>
+  <OperDate>01.10.2022 10:35:19</OperDate>
+  <OperId>9711389344</OperId>
+</GU2GStatusReply>

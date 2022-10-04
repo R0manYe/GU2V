@@ -36,20 +36,22 @@ namespace GU2V
                 vs.InsComplex(prov);
                 GU2G_Vstavka gu2g = new GU2G_Vstavka();
                 gu2g.VstavkaGU2GDoc_Item();
-                // Check a1 = new Check();
-                //string d=a1.Poverka_pz();
+                 Check a1 = new Check();
+                 a1.Poverka_pz();
                 //Console.WriteLine(d);
             }
             else
             {
                
                 string[] email1 = { "roman@abakan.vspt.ru" };
+                DateTime parsedDate = DateTime.Now;
 
                 foreach (string address in email1)
                 {
-                    string TextPisma1 = "неправильный ответ сервера на тест.";
+                    string TextPisma = "неправильный ответ сервера на тест. C '" + parsedDate + "'";
+                    string Zagolovok = "Не правильный ответ от АСУ при импорте ГУ2В ";
                     EmOpov opov1 = new EmOpov();
-                    opov1.Opov_err(address, TextPisma1);
+                    opov1.Opov_err(address, TextPisma,Zagolovok);
                 }
 
             }
