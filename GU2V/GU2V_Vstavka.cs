@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
@@ -73,8 +74,6 @@ namespace GU2V
                 }
             }
 
-
-
         }
         public int VstavkaDoc_Item()
         {
@@ -120,13 +119,19 @@ namespace GU2V
                             OracleDataReader pereb = command3.ExecuteReader();
                             while (pereb.Read())
                             {
-                                string pr = pereb.GetValue(0).ToString();
+                                int pr = Convert.ToInt32(pereb.GetValue(0).ToString());
+                                
                                 Console.WriteLine("Номер " + i + " Код документа " + pr + " " + i_cikl);
                                 //  Console.ReadKey();
                                 string sborn1 = "SELECT  XMLAGG(XMLELEMENT(\"getGU2V\",XMLFOREST(('" + pr + "')\"Doc_ID\")\"secondGoup\")) AS \"XML_QUERY\" FROM DUAL";
                                 GoEtran pars1 = new GoEtran();
                                 string pr1 = pars1.Parsing(sborn1);
-                                File.WriteAllText(@"C:\xml\gu2v_item.xml", pr1);
+                                File.WriteAllText(@"C:\xml\pr1.xml", pr1);                              
+                                var elem1 = XElement.Parse(pr1.Trim());
+                                var otvet = Regex.Replace(elem1.ToString(), @"[\u0000-\u0008,\u000B,\u000C,\u000E-\u001F]", "");
+                                var Podgotovka = Regex.Replace(otvet, "'", "");
+                                File.WriteAllText(@"C:\xml\elem1.xml", otvet);
+                                File.WriteAllText(@"C:\xml\gu2v_item.xml", otvet);
 
                                 XmlDocument xml = new XmlDocument();
                                 xml.Load(@"C:\xml\gu2v_item.xml");
@@ -138,33 +143,34 @@ namespace GU2V
                                     }
                                 }
 
-                                Console.WriteLine("Вызов Декоде");
-                                Decode64 f = new Decode64();
-                                string pr2 = f.Decoder();
-                               /* const string inputXMLFile = @"c:\xml\gu2_64.xml";
-                                string pr2=inputXMLFile;*/
-                             //   Console.WriteLine(pr2);
+                                 Console.WriteLine("Вызов Декоде");
+                                 Decode64 f = new Decode64();
+                                 string pr2 = f.Decoder();
+                                const string inputXMLFile = @"c:\xml\gu2_64.xml";
+                                 pr2 = inputXMLFile;
+                                Console.WriteLine(pr2);
 
                                 using (SqlConnection connection1 = new SqlConnection("Data Source=192.168.1.13;Initial Catalog=dislokacia;User ID=Roman;Password=238533"))
                                 {
-                                    string proverka = "DECLARE @x xml SET @x = '" + pr2 + "' INSERT INTO [FLAGMAN]..[VSPTSVOD].[ETRAN_GU2V_ITEM]([RAILWAY_STATION_NAME],[RAILWAY_STATION_CODE],[RAILWAY_NAME],[NUM],[NOTIFICATION_DATE],[NOTIFICATION_TIME],[ORGID],[CONTRAGENT] " +
-                         ",[GET_PLACE],[WAY_NAME],[ORDER_NUMBER],[WAGON_NUMBER],[PLANNED_FILING_DATE],[PLANNED_FILING_TIME],[OPERATION],[CARGO_NAME],[CARGO_CODE],[RECIPIENT],[WAGONS_TOTAL],[POSITION_FIO],[DOCSTATE],[ID_DOC_ETRAN],[DATE_INS]) " +
-                        " select P.c.value('(railway_station_name)[1]', 'varchar(50)') AS railway_station_name,P.c.value('(railway_station_code)[1]', 'int') AS railway_station_code," +
-                        " P.c.value('(railway_name)[1]', 'varchar(50)') AS railway_name,P.c.value('(number)[1]', 'varchar(50)') AS number,P.c.value('(notification_date)[1]', 'datetime') AS notification_date," +
-                        " P.c.value('(notification_time)[1]', 'varchar(50)') AS notification_time,P.c.value('(orgid)[1]', 'int') AS orgid,P.c.value('(contragent)[1]', 'varchar(200)') AS contragent," +
-                        " P.c.value('(get_place)[1]', 'varchar(50)') AS get_place,P.c.value('(way_name)[1]', 'varchar(50)') AS way_name,T.c.value('(order_number)[1]', 'int') AS order_number," +
-                        " T.c.value('(wagon_number)[1]', 'int') AS wagon_number,T.c.value('(planned_filing_date)[1]', 'datetime') AS planned_filing_date," +
-                        " T.c.value('(planned_filing_time)[1]', 'varchar(50)') AS planned_filing_time,T.c.value('(operation)[1]', 'varchar(50)') AS operation, " +
-                        " T.c.value('(cargo_name)[1]', 'varchar(50)') AS cargo_name,T.c.value('(cargo_code)[1]', 'int') AS cargo_code,T.c.value('(recipient)[1]', 'varchar(300)') AS RECIPIENT," +
-                        " P.c.value('(wagons_total)[1]', 'varchar(50)') AS wagons_total,P.c.value('(position_FIO)[1]', 'varchar(200)') AS position_FIO,'"+St+"' AS DocState," +
-                        "'" + pr + "' as dd,getdate() as dat  FROM @x.nodes('/data/wagons/wagon') T(c) cross apply  @x.nodes('/data') P(c)";
+                                    string proverka = "DECLARE @x xml SET @x = '" + Podgotovka + "'INSERT INTO [FLAGMAN]..[VSPTSVOD].[ETRAN_GU2V_ITEM]([RAILWAY_STATION_NAME],[RAILWAY_STATION_CODE]," +
+                                        " [RAILWAY_NAME],[NUM],[NOTIFICATION_DATE],[ORGID],[CONTRAGENT],[GET_PLACE],[WAY_NAME],[ORDER_NUMBER],[WAGON_NUMBER],[PLANNED_FILING_DATE],[OPERATION]," +
+                                        " [CARGO_NAME],[CARGO_CODE],[RECIPIENT],[WAGOWNERID],[wagOwnerOKPO],[wagOwnerName],[wagTrustedID],[wagTrustedOKPO],[wagTrustedName],[WAGONS_TOTAL],[POSITION_FIO],[DOCSTATE],[ID_DOC_ETRAN],[DATE_INS]) " +
+                                        "select T.c.value('(railway_station_name)[1]', 'varchar(50)') AS railway_station_name,T.c.value('(railway_station_code)[1]', 'int') AS railway_station_code," +
+                                        " T.c.value('(railway_name)[1]', 'varchar(50)') AS railway_name,T.c.value('(number)[1]', 'varchar(50)') AS number, T.c.value('(notification_date)[1]', 'datetime') " +
+                                        " AS notification_date,T.c.value('(orgid)[1]', 'int') AS orgid, T.c.value('(contragent)[1]', 'varchar(200)') AS contragent,T.c.value('(get_place)[1]', 'varchar(50)') " +
+                                        " AS get_place, T.c.value('(get_place)[1]', 'varchar(50)') AS way_name, P.c.value('(order_number)[1]', 'int') AS order_number, P.c.value('(wagon_number)[1]', 'int') " +
+                                        " AS wagon_number, P.c.value('(planned_filing_date)[1]', 'datetime') AS planned_filing_date,P.c.value('(operation)[1]', 'varchar(50)') AS operation, " +
+                                        " P.c.value('(cargo_name)[1]', 'varchar(50)') AS cargo_name, P.c.value('(cargo_code)[1]', 'int') AS cargo_code, P.c.value('(recipient)[1]', 'varchar(300)') AS RECIPIENT," +
+                                        " P.c.value('(wagOwnerID)[1]', 'int') AS wagOwnerID,P.c.value('(wagOwnerOKPO)[1]', 'varchar(20)') AS wagOwnerOKPO,P.c.value('(wagOwnerName)[1]', 'varchar(300)') AS wagOwnerName," +
+                                        " P.c.value('(wagTrustedID)[1]', 'int') AS wagTrustedID, P.c.value('(wagTrustedOKPO)[1]', 'varchar(20)') AS wagTrustedOKPO, P.c.value('(wagTrustedName)[1]', 'varchar(120)') AS wagTrustedName," +
+                                        " T.c.value('(wagons_total)[1]', 'varchar(50)') AS wagons_total, T.c.value('(position_FIO)[1]', 'varchar(300)') AS position_FIO,T.c.value('(DocStateID)[1]', 'varchar(200)') AS DocState," +
+                                        " "+pr+" as dd,getdate() as dat  FROM @x.nodes('/getGU2VReply') T(c)  cross apply  @x.nodes('/getGU2VReply/wagons/wagon') P(c)";
                                     SqlCommand com = new SqlCommand(proverka, connection1);
                                     connection1.Open();
                                     SqlDataReader prov = com.ExecuteReader();
                                     connection1.Close();
                                     Console.WriteLine("Загонка прошла " + pr + "  " + i + " из " + i_cikl);
 
-                                    //  return; 
                                 }
                             }
                                 conn.Close();

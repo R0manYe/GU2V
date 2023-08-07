@@ -26,6 +26,8 @@ namespace GU2V
             GoEtran ch = new GoEtran();
             var otv = ch.Proverka();
             Console.WriteLine(otv);
+            CheckInInsertDbase ch1 = new CheckInInsertDbase();
+            ch1.CheckInError();
             if (otv == 0)
             {
                 GU2V_Vstavka vst = new GU2V_Vstavka();
@@ -36,13 +38,11 @@ namespace GU2V
                 vs.InsComplex(prov);
                 GU2G_Vstavka gu2g = new GU2G_Vstavka();
                 gu2g.VstavkaGU2GDoc_Item();
-                 Check a1 = new Check();
-                 a1.Poverka_pz();
-                //Console.WriteLine(d);
+
             }
             else
             {
-               
+
                 string[] email1 = { "roman@abakan.vspt.ru" };
                 DateTime parsedDate = DateTime.Now;
 
@@ -51,7 +51,7 @@ namespace GU2V
                     string TextPisma = "неправильный ответ сервера на тест. C '" + parsedDate + "'";
                     string Zagolovok = "Не правильный ответ от АСУ при импорте ГУ2В ";
                     EmOpov opov1 = new EmOpov();
-                    opov1.Opov_err(address, TextPisma,Zagolovok);
+                    opov1.Opov_err(address, TextPisma, Zagolovok);
                 }
 
             }

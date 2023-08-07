@@ -5,7 +5,9 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace GU2V
 {
@@ -35,14 +37,16 @@ namespace GU2V
                            " \"secondGoup\",XMLFOREST((to_char(sysdate,'DD.mm.yyyy HH24:MI:SS'))\"toDate\")\"secondGoup\")) AS \"XML_QUERY\" FROM DUAL";
                     GoEtran otv = new GoEtran();
                     string pr = otv.Parsing(sborn);
-                    Console.WriteLine("Проверка в VstavkaGU2G " + pr.Length);
-                    File.WriteAllText("GU2G.xml", pr);
+                     var elem1 = XElement.Parse(pr.Trim());
+                     var otvet = Regex.Replace(elem1.ToString(), @"[\u0000-\u0008,\u000B,\u000C,\u000E-\u001F]", "");
+            Console.WriteLine("Проверка в VstavkaGU2G " + otvet.Length);
+                    File.WriteAllText("GU2G.xml", otvet);
                     //  if (Pars().Length > 100)
 
                     //  {
                     using (SqlConnection connection1 = new SqlConnection("Data Source=192.168.1.13;Initial Catalog=dislokacia;User ID=Roman;Password=238533"))
                     {
-                        string proverka = "DECLARE @x xml SET @x = '" + pr + "' select count(T.c.value('(DocId)[1]', 'int')) AS DocId  FROM @x.nodes('/GU2GStatusReply/GU2G') T(c) where(T.c.value('(DocId)[1]', 'int'))  " +
+                        string proverka = "DECLARE @x xml SET @x = '" + otvet + "' select count(T.c.value('(DocId)[1]', 'int')) AS DocId  FROM @x.nodes('/GU2GStatusReply/GU2G') T(c) where(T.c.value('(DocId)[1]', 'int'))  " +
                         " not in  (SELECT[DOCID] FROM[FLAGMAN]..[VSPTSVOD].[ETRAN_GU2G_DOC])";
                         SqlCommand com = new SqlCommand(proverka, connection1);
                         connection1.Open();
@@ -54,7 +58,7 @@ namespace GU2V
                         if (i_prov > 0)
                         {
                             Console.WriteLine("Происходит загонка");
-                            string ins_gu2v_doc = "DECLARE @x xml SET @x = '" + pr + "' INSERT INTO [FLAGMAN]..[VSPTSVOD].[ETRAN_GU2G_DOC] ([DOCID],[DOCNUM],[DOCSTATEID],[DOCSTATE],[DOCDATE],[ISREPEAT],[GU2GNEEDFORECP]" +
+                            string ins_gu2v_doc = "DECLARE @x xml SET @x = '" + otvet + "' INSERT INTO [FLAGMAN]..[VSPTSVOD].[ETRAN_GU2G_DOC] ([DOCID],[DOCNUM],[DOCSTATEID],[DOCSTATE],[DOCDATE],[ISREPEAT],[GU2GNEEDFORECP]" +
                             ",[DOCLASTOPER],[DATA_INS]) select T.c.value('(DocId)[1]', 'int') AS DocId, T.c.value('(DocNum)[1]', 'int') AS DocNum,T.c.value('(DocStateId)[1]', 'int') AS DocStateId," +
                             "T.c.value('(DocState)[1]', 'varchar(50)') AS DocState,T.c.value('(DocDate)[1]', 'Date') AS DocDate,T.c.value('(isRepeat)[1]', 'int') AS isRepeat,T.c.value('(Gu2GNeedForECP)[1]', 'int') " +
                             "AS Gu2GNeedForECP,T.c.value('(DocLastOper)[1]', 'DateTime') AS DocLastOper,GetDate()  FROM @x.nodes('//GU2GStatusReply/GU2G') T(c) where(T.c.value('(DocId)[1]', 'int')) " +
@@ -144,7 +148,7 @@ namespace GU2V
                                 //  Console.ReadKey();
                                 string sborn1 = "SELECT  XMLAGG(XMLELEMENT(\"getGU2G\",XMLFOREST(('" + pr + "')\"DocID\")\"secondGoup\")) AS \"XML_QUERY\" FROM DUAL";
                                 GoEtran pars1 = new GoEtran();
-                                string pr1 = pars1.Parsing(sborn1);
+                                string pr1 = pars1.Parsing(sborn1);                                
                                 File.WriteAllText("GU2G_ITEM.xml", pr1);
                                 //  Console.WriteLine(pr1);
 

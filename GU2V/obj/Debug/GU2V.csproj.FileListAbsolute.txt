@@ -10,4 +10,3 @@ C:\Razrab\GU2V\GU2V\bin\Debug\GU2V.exe.manifest
 C:\Razrab\GU2V\GU2V\bin\Debug\GU2V.application
 C:\Razrab\GU2V\GU2V\obj\Debug\GU2V.exe.manifest
 C:\Razrab\GU2V\GU2V\obj\Debug\GU2V.application
-C:\Razrab\GU2V\GU2V\obj\Debug\GU2V.csprojAssemblyReference.cache

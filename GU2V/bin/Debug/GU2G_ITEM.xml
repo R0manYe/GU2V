@@ -1,69 +1,38 @@
 <getGU2GReply>
-  <Gu2G_ID>1316928152</Gu2G_ID>
-  <Gu2G_Num>2189</Gu2G_Num>
-  <StateID>1429</StateID>
-  <StateName>Заготовка</StateName>
-  <Gu2GDateCreate>01.10.2022</Gu2GDateCreate>
+  <Gu2G_ID>1417219501</Gu2G_ID>
+  <Gu2G_Num>6300</Gu2G_Num>
+  <StateID>1431</StateID>
+  <StateName>ОАО «РЖД» уведомлено</StateName>
+  <Gu2GDate>03.08.2023 10:46:58</Gu2GDate>
+  <Gu2GNeedForECP>0</Gu2GNeedForECP>
+  <Gu2GDateCreate>03.08.2023 10:32:25</Gu2GDateCreate>
   <Gu2GClientID>42657</Gu2GClientID>
   <Gu2GClientOKPO>05141354</Gu2GClientOKPO>
   <Gu2GClientName>Акционерное общество  "Восточно-Сибирского промышленного  железнодорожного транспорта"</Gu2GClientName>
-  <StationCode>88490</StationCode>
-  <StationName>КИЯ-ШАЛТЫРЬ</StationName>
+  <StationCode>88830</StationCode>
+  <StationName>МИНУСИНСК</StationName>
   <RWID>36</RWID>
   <RWName>КРАСНОЯРСКАЯ</RWName>
-  <Gu2GPlace>ВОСТОКСИБПРОМТР.К-Ш</Gu2GPlace>
-  <Gu2GLoadWay>ВОСТОКСИБПРОМТР.К-Ш</Gu2GLoadWay>
+  <Gu2GPlace>ВОСТОКСИБРОМТР-5/7П</Gu2GPlace>
+  <Gu2GLoadWay>ВОСТОКСИБРОМТР-5/7П</Gu2GLoadWay>
   <isRepeat>0</isRepeat>
+  <WagsAmount>1</WagsAmount>
   <wags>
     <wag>
       <CarOrder>1</CarOrder>
-      <CarID>5823397</CarID>
-      <CarNumber>58056748</CarNumber>
+      <CarID>27618667</CarID>
+      <CarNumber>50815919</CarNumber>
       <carOperation>вгр</carOperation>
-      <PlanDatePodUbor>01.10.2022</PlanDatePodUbor>
-      <carFreightName>УГ БУР НЕПОДМОС</carFreightName>
-      <carRecipName>ООО "Енисей"</carRecipName>
+      <PlanDatePodUbor>03.08.2023 12:32:00</PlanDatePodUbor>
+      <carFreightName>ФР ПРОПАН-БУТАН</carFreightName>
+      <carRecipName>ОАО"КРАСНОЯРСККРАЙГАЗ"</carRecipName>
       <CarIsReady>0</CarIsReady>
-    </wag>
-    <wag>
-      <CarOrder>2</CarOrder>
-      <CarID>5823398</CarID>
-      <CarNumber>53463857</CarNumber>
-      <carOperation>вгр</carOperation>
-      <PlanDatePodUbor>01.10.2022</PlanDatePodUbor>
-      <carFreightName>УГ БУР НЕПОДМОС</carFreightName>
-      <carRecipName>ООО "Енисей"</carRecipName>
-      <CarIsReady>0</CarIsReady>
-    </wag>
-    <wag>
-      <CarOrder>3</CarOrder>
-      <CarID>5823399</CarID>
-      <CarNumber>59874586</CarNumber>
-      <carOperation>вгр</carOperation>
-      <PlanDatePodUbor>01.10.2022</PlanDatePodUbor>
-      <carFreightName>УГ БУР НЕПОДМОС</carFreightName>
-      <carRecipName>ООО "Енисей"</carRecipName>
-      <CarIsReady>0</CarIsReady>
-    </wag>
-    <wag>
-      <CarOrder>4</CarOrder>
-      <CarID>5823400</CarID>
-      <CarNumber>65025082</CarNumber>
-      <carOperation>вгр</carOperation>
-      <PlanDatePodUbor>01.10.2022</PlanDatePodUbor>
-      <carFreightName>УГ БУР НЕПОДМОС</carFreightName>
-      <carRecipName>ООО "Енисей"</carRecipName>
-      <CarIsReady>0</CarIsReady>
-    </wag>
-    <wag>
-      <CarOrder>5</CarOrder>
-      <CarID>5823401</CarID>
-      <CarNumber>60092764</CarNumber>
-      <carOperation>вгр</carOperation>
-      <PlanDatePodUbor>01.10.2022</PlanDatePodUbor>
-      <carFreightName>УГ БУР НЕПОДМОС</carFreightName>
-      <carRecipName>ООО "Енисей"</carRecipName>
-      <CarIsReady>0</CarIsReady>
+      <wagOwnerID>642124</wagOwnerID>
+      <wagOwnerOKPO>17740824</wagOwnerOKPO>
+      <wagOwnerName>Общество с ограниченной ответственностью "ТЛК СЭТ"</wagOwnerName>
+      <wagTrustedID>77579</wagTrustedID>
+      <wagTrustedOKPO>58718274</wagTrustedOKPO>
+      <wagTrustedName>ООО "Газпромтранс"</wagTrustedName>
     </wag>
   </wags>
 </getGU2GReply>

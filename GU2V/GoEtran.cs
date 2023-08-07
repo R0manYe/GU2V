@@ -70,7 +70,7 @@ namespace GU2V
                 string text1 = priceElement.ToString();
                 var xml1 = XElement.Parse(text1);
                 var elem1 = XElement.Parse(xml1.Value.Trim());
-                otvet = Regex.Replace(elem1.ToString(), @"[\u0000-\u0008,\u000B,\u000C,\u000E-\u001F]", "");
+                otvet = Regex.Replace(elem1.ToString(), @"[\u0000-\u0008,\u000B,\u000C,\u000E-\u001F,','']", "");
                 File.WriteAllText("otvet2.xml", otvet.ToString());
             }
             return otvet;
@@ -93,7 +93,7 @@ namespace GU2V
             }
             var xml = XElement.Parse(soapResult);
             var elem = XElement.Parse(xml.Value.Trim());
-            string code3 = Regex.Replace(elem.ToString(), @"[\u0000-\u0008,\u000B,\u000C,\u000E-\u001F]", "");
+            string code3 = Regex.Replace(elem.ToString(), @"[\u0000-\u0008,\u000B,\u000C,\u000E-\u001F,','']", "");
             // Console.WriteLine(code3);
             File.WriteAllText("otvet0.xml", code3);
             XDocument xdoc = XDocument.Parse(code3);
@@ -108,7 +108,7 @@ namespace GU2V
                 string text1 = priceElement.ToString();
                 var xml1 = XElement.Parse(text1);
                 var elem1 = XElement.Parse(xml1.Value.Trim());
-                otvet = Regex.Replace(elem1.ToString(), @"[\u0000-\u0008,\u000B,\u000C,\u000E-\u001F]", "");
+                otvet = Regex.Replace(elem1.ToString(), @"[\u0000-\u0008,\u000B,\u000C,\u000E-\u001F,','']", "");
                 File.WriteAllText("otvet2.xml", otvet.ToString());
 
             }

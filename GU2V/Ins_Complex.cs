@@ -21,8 +21,7 @@ namespace GU2V
         public void InsComplex(int prov)
         {
 
-            GU2V_Vstavka vs = new GU2V_Vstavka();
-            //  int prov = vs.VstavkaDoc_Item();
+            GU2V_Vstavka vs = new GU2V_Vstavka();          
             Console.WriteLine("Из нового метода");
             Console.WriteLine("Получили в новом методе prov=" + prov);
 
@@ -43,17 +42,20 @@ namespace GU2V
                     conn.Close();
                     Console.WriteLine(" Код документа " + pereb_c);
                     string udal = "delete from COMPLEX.prsd_wagon_load where etran_doc_id is not null and date_fix_load is null and date_load<sysdate-2";
-                    string vstav = "insert into complex.prsd_wagon_load(SERIAL_NUMBER,WAGON_ID,netto,CARGO_ID,COMPANY_ID,TYPE_ID,doc_id,DISTRICT_ID,date_load,bu_id,WAGON_LOAD_ID,DOC_TYPE_ID,date1,n_poezd,tara,capacity," +
-                         " owner_id,ETRAN_DOC_ID,ETRAN_DOC_DATE,ETRAN_DOC_NUM,ETRAN_PLAN_DATE_PODACH,ETRAN_RZD_PRIM_FIO) " +                        
+                    string vstav = "insert into complex.prsd_wagon_load(SERIAL_NUMBER,WAGON_ID,netto,CARGO_ID,COMPANY_ID,OWNER_ID,ARENDATOR_ID,TYPE_ID,doc_id,DISTRICT_ID,date_load,bu_id,WAGON_LOAD_ID,DOC_TYPE_ID,date1,n_poezd,tara,capacity," +
+                         " ETRAN_DOC_ID,ETRAN_DOC_DATE,ETRAN_DOC_NUM,ETRAN_PLAN_DATE_PODACH,ETRAN_RZD_PRIM_FIO) " +                        
                              "select (select order_number from dislokacia  d where d.nom_vag=wagon_number) as SERIAL_NUMBER,wagon_number as wagon_id," +
                              "(select ves_grz / 1000 from dislokacia d where d.nom_vag = wagon_number) as NETTO, case when (select ves_grz/1000 from dislokacia  d where d.nom_vag=wagon_number) = 0 then '0' else  rpad(cargo_code, length(cargo_code) - 1) end as CARGO_ID," +
-                             "(select inn from spr_cli where OKPO = (select d.gruzpol_okpo from dislokacia d where d.nom_vag = wagon_number) and spr_cli.id_st = railway_station_code) as COMPANY_ID," +
+                             "(select inn from spr_etran_org where spr_etran_org.id=(select id_gruzpol from dislokacia where nom_vag=etran_gu2v_item.wagon_number)) as COMPANY_ID," +
+                             " (select inn from spr_etran_org where etran_gu2v_item.wagownerid=spr_etran_org.id) as OWNER_ID," +
+                             "(select inn from spr_etran_org where etran_gu2v_item.wagtrustedid = spr_etran_org.id) as ARENDATOR_ID," +
                              "(select type_id from complex.spr_wagon_type where complex.spr_wagon_type.rzd_id_sinhro = (select d.rod_vag_uch from dislokacia d where d.nom_vag = wagon_number))as TYPE_ID," +
-                             "'" + pereb_c + "' as doc_id,(select DISTRICT_ID from complex.spr_station where DISTRICT_ID is not null and STATION_ECP_ID = railway_station_code) as district_id," +
-                             "sysdate - (4 / 24) as date_load,(select bu_id from complex.spr_district where DISTRICT_ID = (select DISTRICT_ID from complex.spr_station where DISTRICT_ID is not null and STATION_ECP_ID = railway_station_code)) as bu_id," +
+                             "'" + pereb_c + "' as doc_id,case when railway_station_code in ('88250','882506') and GET_PLACE like '%ЗАВОД%' then 20210030111 when railway_station_code in ('88250','882506') and GET_PLACE like '%ПРОМЫШ%' " +
+                             "then 20210030112 else (select DISTRICT_ID from complex.spr_station where DISTRICT_ID is not null and STATION_ECP_rzd =(case when LENGTH(railway_station_code)=6 then substr(railway_station_code,0,5) else railway_station_code end)) end as district_id," +
+                             "sysdate - (4 / 24) as date_load,(select bu_id from complex.spr_district where DISTRICT_ID = (select DISTRICT_ID from complex.spr_station where DISTRICT_ID is not null and station_ecp_id is null and rownum = 1 and STATION_ECP_rzd = railway_station_code)) as bu_id," +
                              "complex.count_row.nextval as WAGON_LOAD_ID,'1866658' as DOC_TYPE_ID,(select date_op from dislokacia d where d.nom_vag = wagon_number) as date1," +
                              "(select NOM_POEZD from dislokacia d where d.nom_vag = wagon_number) as n_poezd,(select(carweightdep / 10) from SPR_ETRAN_VAGON where vagon = wagon_number) as tara," +
-                             "(select replace(cartonnage, '.', ',') from SPR_ETRAN_VAGON where vagon = wagon_number) as capacity,(select carownerid from SPR_ETRAN_VAGON where vagon = wagon_number) as owner_id,'" + pereb_c + "' as ETRAN_doc_id," +
+                             "(select replace(cartonnage, '.', ',') from SPR_ETRAN_VAGON where vagon = wagon_number) as capacity,'" + pereb_c + "' as ETRAN_doc_id," +
                              "to_date(SUBSTRb(notification_date, 5, 2) || '.' || (select id_f from mesac where name3 = SUBSTRB(notification_date, 1, 3)) || '.' || SUBSTRb(notification_date, 8, 4) || notification_time,'DD.MM.YYYY HH24:MI')  as ETRAN_DOC_DATE," +
                              " NUM as ETRAN_DOC_NUM, to_date(SUBSTRb(planned_filing_date, 5, 2) || '.' || (select id_f from mesac where name3 = SUBSTRB(planned_filing_date, 1, 3)) || '.' || SUBSTRb(planned_filing_date, 8, 4) || planned_filing_time,'DD.MM.YYYY HH24:MI')  as ETRAN_PLAN_DATE_PODACH," +
                              " position_fio as ETRAN_RZD_PRIM_FIO from etran_gu2v_item where id_doc_etran = '"+ pereb_c+"' and not EXISTS(select etran_doc_id from COMPLEX.prsd_wagon_load pwl where etran_doc_id is not null " +
